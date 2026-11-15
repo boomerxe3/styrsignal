@@ -199,6 +199,14 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 }
 
 /* References */
+.refs { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.refs-lead {
+  margin: 0; padding-top: 24px; border-top: 1px solid var(--ink);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem); font-weight: 600; font-stretch: 108%; line-height: 1.35; letter-spacing: -0.01em; color: var(--ink);
+}
+.refs-body { padding-top: 24px; border-top: 1px solid var(--line); }
+.refs-body p { margin: 0 0 18px; font-size: 1.05rem; }
+.refs-label { margin: 36px 0 14px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 .areas span {
   display: inline-flex; align-items: center; gap: 8px;
@@ -247,7 +255,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .split, .contact { grid-template-columns: 1fr; gap: 40px; }
+  .split, .contact, .refs { grid-template-columns: 1fr; gap: 40px; }
   .roles, .goals { grid-template-columns: 1fr; gap: 32px; }
   .goals { gap: 0; }
   .contact .portrait { max-width: 300px; }

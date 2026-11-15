@@ -259,8 +259,12 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .site-nav a::after { display: none; }
   .site-nav .nav-cta { margin: 16px 0 0; text-align: center; border-bottom: 0; }
   .logo img { width: 160px; }
-  .hero { padding-top: 56px; }
-  .trend { height: 150px; margin-top: 40px; }
+  .hero { padding-top: 28px; }
+  .hero h1 > .bars { display: none; }
+  .hero .lead { margin-top: 16px; }
+  .hero-actions { margin-top: 20px; gap: 8px; }
+  .hero .btn { padding: 10px 18px; font-size: .95rem; }
+  .trend { height: 150px; margin-top: 24px; }
   .section { padding: 64px 0; }
   .page-head { padding: 56px 0 16px; }
   .page-head ~ .section { padding: 44px 0; }
@@ -270,6 +274,9 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 }
 @media (max-width: 480px) {
   .btn { width: 100%; justify-content: center; }
+  .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .hero h1 { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+  .hero .btn { padding: 10px 8px; font-size: .9rem; white-space: nowrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -96,7 +96,6 @@ main { flex: 1; }
 .bars i:nth-child(3) { height: calc(var(--h) * .45); }
 .bars i:nth-child(4) { height: calc(var(--h) * .46); margin-top: 0; background: var(--green); }
 
-h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .mark-head { display: flex; align-items: flex-end; gap: 14px; font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: 20px; }
 .mark-head .bars { --h: 24px; margin-bottom: .15em; }
 
@@ -231,12 +230,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .js .hero h1, .js .hero .lead, .js .hero-actions { opacity: 0; transform: translateY(16px); animation: rise .9s var(--ease) forwards; }
 .js .hero .lead { animation-delay: .12s; }
 .js .hero-actions { animation-delay: .24s; }
-.js h1 > .bars i { transform: scaleY(0); transform-origin: top; animation: bar .6s var(--ease) forwards; }
-.js h1 > .bars i:nth-child(2) { animation-delay: .08s; }
-.js h1 > .bars i:nth-child(3) { animation-delay: .16s; }
-.js h1 > .bars i:nth-child(4) { animation-delay: .24s; }
 @keyframes rise { to { opacity: 1; transform: none; } }
-@keyframes bar { to { transform: scaleY(1); } }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -260,7 +254,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .site-nav .nav-cta { margin: 16px 0 0; text-align: center; border-bottom: 0; }
   .logo img { width: 160px; }
   .hero { padding-top: 28px; }
-  .hero h1 > .bars { display: none; }
   .hero .lead { margin-top: 16px; }
   .hero-actions { margin-top: 20px; gap: 8px; }
   .hero .btn { padding: 10px 18px; font-size: .95rem; }
@@ -276,6 +269,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .btn { width: 100%; justify-content: center; }
   .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+  .page-head h1 { font-size: clamp(1.8rem, 8.4vw, 2.4rem); }
   .hero .btn { padding: 10px 8px; font-size: .9rem; white-space: nowrap; }
 }
 

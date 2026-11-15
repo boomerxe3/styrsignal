@@ -34,7 +34,7 @@ Kunderna driver kvarnar, flotation, gruvventilation och andra processavsnitt. Up
 - Kunder (bekräftade som text, inte logotyper): Boliden, LKAB, Kaunis Iron, ABB. Logotyper får visas först om Erik får godkännande från respektive bolag.
 - Verksamhet sedan 2019.
 - Fem olika anläggningar har fått förbättrad kvarnstyrning med Styrsignals hjälp; flotation och gruvventilation är andra processområden.
-- Erik: civilingenjör i teknisk fysik (Linköpings universitet), sexton års erfarenhet, tidigare anställd vid ABB och ÅF, titel Senior Process Control Engineer.
+- Erik: civilingenjör i teknisk fysik (Linköpings universitet), tjugo års erfarenhet, tidigare anställd vid ABB och ÅF, titel Senior Process Control Engineer.
 - Dessa fakta får lyftas fram som stora siffror.
 - Kontakt: +46 (0)761 300011, erik.klintenas@styrsignal.com, Trastvägen 19A, 906 54 Umeå. LinkedIn: https://www.linkedin.com/in/erik-klinten%C3%A4s-8397452/
 - Juridik: Styrsignal AB, org.nr 559187-2055, följer ABK09, F-skatt, momsregistrerat, relevant försäkring.

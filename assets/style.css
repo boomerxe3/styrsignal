@@ -89,17 +89,16 @@ main { flex: 1; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* Signal bars – logotypens fyra staplar som återkommande märke */
-.bars { display: inline-flex; align-items: flex-end; gap: 4px; height: 18px; }
-.bars i { display: block; width: 4px; border-radius: 2px; background: var(--grey); }
-.bars i:nth-child(1) { height: 70%; background: var(--red); }
-.bars i:nth-child(2) { height: 85%; }
-.bars i:nth-child(3) { height: 60%; }
-.bars i:nth-child(4) { height: 100%; background: var(--green); }
+.bars { --h: 18px; display: inline-flex; align-items: flex-start; gap: calc(var(--h) * .15); height: var(--h); flex-shrink: 0; }
+.bars i { display: block; width: calc(var(--h) * .07); min-width: 3px; border-radius: 999px; background: var(--grey); margin-top: calc(var(--h) * .18); }
+.bars i:nth-child(1) { height: calc(var(--h) * .82); background: var(--red); }
+.bars i:nth-child(2) { height: calc(var(--h) * .64); }
+.bars i:nth-child(3) { height: calc(var(--h) * .45); }
+.bars i:nth-child(4) { height: calc(var(--h) * .46); margin-top: 0; background: var(--green); }
 
-h1 > .bars { display: flex; height: 22px; gap: 5px; margin-bottom: 28px; }
-h1 > .bars i { width: 5px; }
+h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .mark-head { display: flex; align-items: flex-end; gap: 14px; font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: 20px; }
-.mark-head .bars { margin-bottom: .2em; }
+.mark-head .bars { --h: 24px; margin-bottom: .15em; }
 
 /* Hero */
 .hero { position: relative; padding: 96px 0 0; overflow: hidden; }
@@ -259,7 +258,7 @@ h1 > .bars i { width: 5px; }
 .js .hero h1, .js .hero .lead, .js .hero-actions { opacity: 0; transform: translateY(16px); animation: rise .9s var(--ease) forwards; }
 .js .hero .lead { animation-delay: .12s; }
 .js .hero-actions { animation-delay: .24s; }
-.js h1 > .bars i { transform: scaleY(0); transform-origin: bottom; animation: bar .6s var(--ease) forwards; }
+.js h1 > .bars i { transform: scaleY(0); transform-origin: top; animation: bar .6s var(--ease) forwards; }
 .js h1 > .bars i:nth-child(2) { animation-delay: .08s; }
 .js h1 > .bars i:nth-child(3) { animation-delay: .16s; }
 .js h1 > .bars i:nth-child(4) { animation-delay: .24s; }

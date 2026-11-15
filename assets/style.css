@@ -162,7 +162,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .figure figcaption { margin-top: 14px; font-size: .85rem; color: var(--muted); }
 
 /* Page header */
-.page-head { padding: 80px 0 56px; border-bottom: 1px solid var(--line); }
+.page-head { padding: 80px 0 24px; }
 .page-head ~ .section { padding: 64px 0; }
 .page-head + .section { padding-top: 48px; }
 .page-head h1 { font-size: clamp(2.4rem, 5.4vw, 4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
@@ -262,7 +262,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .hero { padding-top: 56px; }
   .trend { height: 150px; margin-top: 40px; }
   .section { padding: 64px 0; }
-  .page-head { padding: 56px 0 40px; }
+  .page-head { padding: 56px 0 16px; }
   .page-head ~ .section { padding: 44px 0; }
   .page-head + .section { padding-top: 36px; }
   .contact-cards { grid-template-columns: 1fr; }

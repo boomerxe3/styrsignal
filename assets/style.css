@@ -199,12 +199,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 }
 
 /* References */
-.clients { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
-.clients li {
-  padding: 32px 24px 32px 0;
-  font-size: clamp(1.5rem, 2.8vw, 2.2rem); font-weight: 800; font-stretch: 118%; color: var(--ink); letter-spacing: -0.025em; line-height: 1.1;
-}
-.clients li + li { padding-left: 24px; border-left: 1px solid var(--line); }
 .areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 .areas span {
   display: inline-flex; align-items: center; gap: 8px;
@@ -256,9 +250,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .split, .contact { grid-template-columns: 1fr; gap: 40px; }
   .roles, .goals { grid-template-columns: 1fr; gap: 32px; }
   .goals { gap: 0; }
-  .clients { grid-template-columns: repeat(2, 1fr); }
-  .clients li:nth-child(3) { padding-left: 0; border-left: 0; }
-  .clients li:nth-child(n+3) { border-top: 1px solid var(--line); }
   .contact .portrait { max-width: 300px; }
 }
 @media (max-width: 760px) {
@@ -283,9 +274,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   .site-footer .wrap { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {
-  .clients { grid-template-columns: 1fr; }
-  .clients li, .clients li + li { padding: 20px 0; border-left: 0; }
-  .clients li + li { border-top: 1px solid var(--line); }
   .btn { width: 100%; justify-content: center; }
 }
 

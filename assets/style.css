@@ -128,13 +128,19 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .trend { position: relative; margin-top: 56px; height: 220px; }
 .trend svg { width: 100%; height: 100%; display: block; overflow: visible; }
 .trend .grid line { stroke: var(--line); stroke-width: 1; }
-.trend .setpoint { stroke: var(--green); stroke-width: 1.5; stroke-dasharray: 6 6; opacity: .55; }
+.trend .setpoint { fill: none; stroke: var(--green); stroke-width: 1.5; stroke-dasharray: 6 6; opacity: .55; }
+.trend .setpoint-old { stroke: var(--grey); opacity: .3; }
 .trend .signal { fill: none; stroke: url(#signal-gradient); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .trend .label { font: 600 11px var(--font); letter-spacing: .12em; fill: var(--muted); text-transform: uppercase; }
 .trend .dot { fill: var(--green); }
-.js .trend .signal { stroke-dasharray: 2600; stroke-dashoffset: 2600; animation: draw 3.2s var(--ease) .3s forwards; }
+.js .trend .signal { clip-path: inset(0 100% 0 0); animation: draw 3.2s var(--ease) .3s forwards; }
+/* Börvärdet stegar upp när signalen når x=600 (ca 1s in i ritningen) */
+.js .trend .setpoint-old { stroke: var(--green); opacity: .55; animation: sp-old .5s ease-out 1s forwards; }
+.js .trend .setpoint-new { opacity: 0; animation: sp-new .5s ease-out 1s forwards; }
+@keyframes sp-old { to { stroke: var(--grey); opacity: .3; } }
+@keyframes sp-new { to { opacity: .55; } }
 .js .trend .dot { opacity: 0; animation: pulse 2.4s ease-out 3.3s infinite; transform-box: fill-box; transform-origin: center; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes draw { to { clip-path: inset(0 0 0 0); } }
 @keyframes pulse {
   0% { opacity: 1; transform: scale(1); }
   70% { opacity: .25; transform: scale(2.2); }
@@ -159,16 +165,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 .page-head { padding: 80px 0 56px; border-bottom: 1px solid var(--line); }
 .page-head h1 { font-size: clamp(2.4rem, 5.4vw, 4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
 
-/* Facts */
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 48px; margin: 0; }
-.facts > div { border-top: 1px solid var(--ink); padding-top: 20px; }
-.facts dt { font-size: .95rem; font-weight: 600; color: var(--ink); }
-.facts dd { margin: 0; color: var(--text); max-width: 30ch; }
-.facts .fig { font-size: clamp(3.6rem, 8vw, 6rem); font-weight: 800; font-stretch: 125%; line-height: 1; letter-spacing: -0.04em; color: var(--green); margin: 14px 0 16px; font-variant-numeric: tabular-nums; }
-.clients-line { margin: 64px 0 0; padding-top: 28px; border-top: 1px solid var(--line); font-size: 1.15rem; color: var(--text); }
-.clients-line strong { color: var(--ink); font-weight: 700; }
-.clients-line a { font-weight: 600; margin-left: .4em; white-space: nowrap; }
-.clients-line a::after { content: " →"; }
 
 /* Prose */
 .prose { max-width: 70ch; }
@@ -268,7 +264,7 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 /* Responsive */
 @media (max-width: 900px) {
   .split, .contact { grid-template-columns: 1fr; gap: 40px; }
-  .roles, .goals, .facts { grid-template-columns: 1fr; gap: 32px; }
+  .roles, .goals { grid-template-columns: 1fr; gap: 32px; }
   .goals { gap: 0; }
   .clients { grid-template-columns: repeat(2, 1fr); }
   .clients li:nth-child(3) { padding-left: 0; border-left: 0; }
@@ -306,6 +302,8 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; }
-  .js .trend .signal { stroke-dashoffset: 0; }
+  .js .trend .signal { clip-path: none; }
+  .js .trend .setpoint-old { stroke: var(--grey); opacity: .3; }
+  .js .trend .setpoint-new { opacity: .55; }
   .js .trend .dot { opacity: 1; }
 }

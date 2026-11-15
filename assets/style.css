@@ -198,16 +198,6 @@ h1 > .bars { --h: 30px; display: flex; margin-bottom: 28px; }
   font-size: .9rem; color: var(--muted); font-style: italic; text-align: center;
 }
 
-/* References */
-.prose .refs-label { margin: 36px 0 14px; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-.areas span {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 16px; border-radius: 999px; background: #fff; border: 1px solid var(--line);
-  font-weight: 600; color: var(--ink); font-size: .95rem;
-}
-.areas span::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
-
 /* Contact */
 .contact { display: grid; grid-template-columns: 340px 1fr; gap: 64px; align-items: start; }
 .portrait { border-radius: 18px; overflow: hidden; background: var(--bg-soft); }

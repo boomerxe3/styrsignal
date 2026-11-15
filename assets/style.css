@@ -150,6 +150,8 @@ h1 > .bars i { width: 5px; }
 
 .split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
 .split p { font-size: 1.15rem; }
+.about { max-width: 62ch; }
+.about p { font-size: clamp(1.15rem, 1.6vw, 1.3rem); margin: 0; }
 .portrait { margin: 0; }
 .figure { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px; margin: 0; }
 .figure figcaption { margin-top: 14px; font-size: .85rem; color: var(--muted); }

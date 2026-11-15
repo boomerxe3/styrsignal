@@ -6,28 +6,84 @@
   <title>Referenser | Styrsignal</title>
   <meta name="description" content="Styrsignal AB hjälper företag att effektivisera sina anläggningar för högre produktivitet, minskad miljöbelastning och ökad förtjänst.">
   <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/site.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#main">Hoppa till innehållet</a>
   <header class="site-header">
-    <a class="logo" href="index.html"><img src="assets/logo.png" alt="Styrsignal" width="1920" height="315"></a>
-    <nav>
-      <a href="index.html">Startsida</a>
-      <a href="erbjudandet.html">Erbjudandet</a>
-      <a href="referenser.html" aria-current="page">Referenser</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
+    <div class="wrap">
+      <a class="logo" href="index.html"><img src="assets/logo.png" alt="Styrsignal" width="1920" height="315"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Meny"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Huvudmeny">
+        <a href="index.html">Startsida</a>
+        <a href="erbjudandet.html">Erbjudandet</a>
+        <a href="referenser.html" aria-current="page">Referenser</a>
+        <a class="nav-cta" href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Utförda projekt</h2>
-    <p>Styrsignal startade verksamheten 2019 och har sedan dess haft förmånen att jobba med flera bolag i den svenska gruvnäringen, som exempelvis Boliden, LKAB, Kaunis Iron och ABB.</p>
-    <p>Majoriteten av uppdragen har haft processoptimering som huvudsyfte. Processoptimering är också det område där Styrsignal kan medverka till störst förbättringar.</p>
-    <p>Fem olika anläggningar har fått till stånd förbättrad kvarnstyrning med Styrsignals hjälp. Flotation och gruvventilation är andra processområden där Styrsignal har bidragit med kompetens.</p>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <p class="eyebrow"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Referenser</p>
+        <h1>Utförda projekt</h1>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="prose" data-reveal>
+          <p>Styrsignal startade verksamheten 2019 och har sedan dess haft förmånen att jobba med flera bolag i den svenska gruvnäringen, som exempelvis Boliden, LKAB, Kaunis Iron och ABB.</p>
+        </div>
+        <ul class="clients" aria-label="Exempel på bolag">
+          <li data-reveal>Boliden</li>
+          <li data-reveal data-delay="1">LKAB</li>
+          <li data-reveal data-delay="2">Kaunis Iron</li>
+          <li data-reveal data-delay="3">ABB</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="wrap">
+        <div class="prose" data-reveal>
+          <p>Majoriteten av uppdragen har haft processoptimering som huvudsyfte. Processoptimering är också det område där Styrsignal kan medverka till störst förbättringar.</p>
+          <p>Fem olika anläggningar har fått till stånd förbättrad kvarnstyrning med Styrsignals hjälp. Flotation och gruvventilation är andra processområden där Styrsignal har bidragit med kompetens.</p>
+        </div>
+        <div class="areas" data-reveal data-delay="1" aria-label="Processområden">
+          <span>Kvarnstyrning</span>
+          <span>Flotation</span>
+          <span>Gruvventilation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="wrap">
+        <h2 data-reveal>Kontakta Erik Klintenäs</h2>
+        <div class="hero-actions cta-actions" data-reveal data-delay="1">
+          <a class="btn btn-primary" href="tel:+46761300011">+46 (0)761 300011</a>
+          <a class="btn btn-ghost" href="mailto:erik.klintenas@styrsignal.com">erik.klintenas@styrsignal.com</a>
+        </div>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
-    <a href="https://www.linkedin.com/in/erik-klinten%C3%A4s-8397452/" aria-label="LinkedIn"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-    <p>+46 (0)761 300011</p>
-    <div>&copy;2023 by Styrsignal.</div>
+    <div class="wrap">
+      <a class="foot-logo" href="index.html"><img src="assets/logo.png" alt="Styrsignal" width="1920" height="315"></a>
+      <div class="foot-meta">
+        <a class="linkedin" href="https://www.linkedin.com/in/erik-klinten%C3%A4s-8397452/" aria-label="LinkedIn"><img src="assets/linkedin.png" alt=""></a>
+        <a href="tel:+46761300011">+46 (0)761 300011</a>
+        <span>&copy;2023 by Styrsignal.</span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
